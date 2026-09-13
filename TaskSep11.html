@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // (1) Write a function to print 'Hello World'.
+
+      // function printHello(){
+      //   console.log("Hello World");
+      // }
+      // printHello();
+      // output: Hello World
+
+      // (2) Create a function to add two numbers.
+
+      // function addNumbers(){
+      //   number1 = 21;
+      //   number2 = 67;
+      //   result = (number1 + number2);
+      //   console.log(result);
+      // }
+      // addNumbers();
+      // output: 88
+
+      // (3) Write a function to subtract two numbers.
+
+      // function subtractNumbers(){
+      //   number1 = 67;
+      //   number2 = 21;
+      //   result = (number1 - number2);
+      //   console.log(result);
+      // }
+      // subtractNumbers();
+      // output: 46
+
+      // (4) Make a function that multiplies two numbers.
+
+      // function multiplyNumbers(){
+      //   number1 = 21;
+      //   number2 = 67;
+      //   result = (number1 * number2);
+      //   console.log(result);
+      // }
+      // multiplyNumbers();
+      // output: 1407
+
+      // (5) Create a function that divides two numbers.
+
+      // function divideNumbers(){
+      //   number1 = 25;
+      //   number2 = 5;
+      //   result = (number1 / number2);
+      //   console.log(result);
+      // }
+      // divideNumbers();
+      // output: 5
+
+      // (6) Write a function that takes your name and prints a greeting message.
+
+      // function greetMessage(){
+      //   name = "Ishan";
+      //   console.log("Hello " + name);
+      // }
+      // greetMessage();
+      // output: Hello Ishan
+
+      // (7) Create a function to find the square of a number.
+
+      // function square(){
+      //   num = 20;
+      //   result = (num * num);
+      //   console.log(result);
+      // }
+      // square();
+      // output: 400
+
+      // (8) Write a function to find the cube of a number.
+
+      // function cube(){
+      //   num = 2;
+      //   result = (num * num * num);
+      //   console.log(result);
+      // }
+      // cube();
+      // output: 8
+
+      // (9) Create a function to check whether a number is even or odd.
+
+      // function isEvenOrOdd(){
+      //   num = 31;
+      //   if(num % 2 == 0){
+      //     console.log("number is even");
+      //   }
+      //   else{
+      //     console.log("number is odd");
+      //   }
+      // }
+      // isEvenOrOdd();
+      // output: number is odd
+
+      // (10) Write a function to find the largest of two numbers.
+
+      // function findLargest(){
+      //   number1 = 21;
+      //   number2 = 67;
+      //   if (number1 > number2){
+      //     console.log("First Number(21) is largest");
+      //   }
+      //   else{
+      //     console.log("Second Number(67) is largest");
+      //   }
+      // }
+      // findLargest();
+      // output: Second Number(67) is largest
+
+      // (11) Create a function to calculate area of a rectangle (length × width).
+
+      // function areaOfRectangle(){
+      //   length = 20;
+      //   width = 30;
+      //   result = (length * width);
+      //   console.log(result);
+      // }
+      // areaOfRectangle();
+      // output: 600
+
+      // (12) Write a function to convert Celsius to Fahrenheit.
+
+      // formula to convert celsius to temperature is (Celsius * 9/5) + 32
+
+      // function temperatureConversion(){
+      //   celsius = 28;
+      //   result = ((celsius * 9/5) + 32);
+      //   console.log("Temperature in Fahrenheit: " + result);
+      // }
+      // temperatureConversion();
+      // output: Temperature in Fahrenheit: 82.4
+
+      // September 7 Questions converted into functions
+
+      // Arithmetic Operators
+
+      //(1) Write a program to add, subtract, multiply, and divide two numbers.
+
+      // function operations(){
+      // a = 20;
+      // b = 10;
+      // addition = a + b;
+      // substraction = a - b;
+      // multiply = a * b;
+      // divide = a / b;
+      // console.log(addition);
+      // console.log(substraction);
+      // console.log(multiply);
+      // console.log(divide);
+      // }
+      // operations();
+      // output:
+      // 30
+      // 10
+      // 200
+      // 2
+
+      //(2) Predict the result:
+
+      // function prediction(){
+      //   console.log(10 + 5 * 2);
+      //   console.log((10 + 5) * 2);
+      // }
+      // prediction();
+      // output:
+      // 20
+      // 30
+
+      //(3) Write a program to find the area of a circle (πr²) using a variable r = 5.
+
+      // function areaOfCircle(){
+      //   const PI = 3.14;
+      //   r = 5;
+      //   area = PI * r * r;
+      //   console.log(area);
+      // }
+      // areaOfCircle();
+      // output: 78.5
+
+      //(4) Find the remainder when 17 is divided by 3.
+
+      // function findRemainder(){
+      //   remainder = 17 % 3;
+      //   console.log(remainder);
+      // }
+      // findRemainder();
+      // output: 2
+
+      //(5) If a = 10, what are the values of a++ and ++a?
+
+      // a++  = 10
+      // ++a = 11
+
+      //(6) Write a program to calculate the square and cube of a number entered by the user.
+
+      // function squareAndCube(){
+      //   number = 10;
+      //   square = number * number;
+      //   cube = number * number * number;
+      //   console.log("square: " + square);
+      //   console.log("cube: " + cube);
+      // }
+      // squareAndCube();
+      // output
+      // square: 100
+      // cube: 1000
+
+      // Assignment Operators
+      //(7) If let x = 5; x += 3;, what is the value of x?
+
+      // the value of x is 8
+      
+      //(8) Write a program using *=, /=, and -= to modify a number.
+
+      // function modification(){
+      //   number = 40;
+      //   a = number *= 2;
+      //   b = number /= 2;
+      //   c = number -= 40;
+      //   console.log(a);
+      //   console.log(b);
+      //   console.log(c);
+      // }
+      // modification();
+      // output:
+      // 80
+      // 40
+      // 0
+
+      //(9) Predict the result: let a = 4; a *= 3 + 2; console.log(a);
+
+      // the result would be 20
+
+      //(10) Write a short script that uses += to keep adding 10 to a variable until it reaches 100.
+
+      // function increment(){
+      //   number = 0;
+      //   number += 10;
+      //   number += 10;
+      //   number += 10;
+      //   number += 10;
+      //   number += 10;
+      //   number += 10;
+      //   number += 10;
+      //   number += 10;
+      //   number += 10;
+      //   number += 10;
+      //   console.log(number);
+      // }
+      // increment();
+      // output: 100
+      
+      //(11) If let total = 20; total /= 5;, what will be printed?
+
+      // 4 will be printed
+
+      //Comparison Operators
+
+      //(12) What’s the difference between == and ===? Show with examples.
+
+      // == is loose comparison operator, while === is strict
+      // == ignores data type while comparing, checks only data.
+      // === also cares about the data type with data
+      // stringAge = "20";
+      // numberAge = 20;
+      // looseComparison = stringAge == numberAge;
+      // strictComparison = stringAge === numberAge;
+      // console.log(looseComparison);
+      // console.log(strictComparison);
+      // we can see with loose comparison operator we are getting true
+      // while with strict comparison operator we are getting false
+
+      //(13) Predict the results:
+
+      // console.log(10>5) = true
+      // console.log(10<5) = false
+      // console.log(10 == '10') = true
+      // console.log(10 === '10') = false
+      // console.log(10 != 8) = true
+      // console.log(10 !== '10') = true 
+
+      //(14) Write a program that checks if a number is greater than or equal to 100
+
+      // function isGreat(){
+      //   number = 20;
+      //   isGreatOrEqual = number >= 100 ? "number is greater than or equal to 100" : "number is not greater than or equal to 100";
+      //   console.log(isGreatOrEqual);
+      // }
+      // isGreat();
+      // output: number is not greater than or equal to 100  
+
+      //(15) Write a condition that checks if two strings are equal ('hello' and 'Hello').
+
+      // function isStringEqual(){
+      //   firstString = 'hello';
+      //   secondString = 'Hello';
+      //   isEqual = firstString == secondString ? "strings are equal" : "strings are not equal";
+      //   console.log(isEqual);
+      // }
+      // isStringEqual();
+      // strings are not equal
+
+      // September 8 questions converted into functions
+
+      //Logical Operators 
+
+      //(1) Predict the output:
+
+      // console.log(true&&false); = output will be false, because one of the condition is false, both conditions need to be true in AND operator 
+      // console.log(true || false); = output will be true, because atleast one condition is true, completing the requirement of OR operator
+      // console.log(!false); = output will be true, because NOT operator inversed(toggled) the value of console.log which store the value "false"
+
+      //(2) Write a program that checks if a number is between 10 and 50 (both inclusive)
+
+      // function checkRange(){ 
+      //   number = 21;
+      //   result = number >= 10 && number <= 50 ? "the number is between 10 & 50" : "the number is not between 10 & 50";
+      //   console.log(result);  
+      // }
+      // checkRange();
+      // output: the number is between 10 & 50
+      
+
+      //(3) Check if a student passes only if marks>= 40 and attendance>= 75
+
+      // function passOrFail(){
+      //   studentMarks = 67;
+      //   studentAttendance = 97;
+      //   result = studentMarks >= 40 && studentAttendance >= 75 ? "the student has passed" : "the student has failed";
+      //   console.log(result);
+      // }
+      // passOrFail();
+      // output: the student has passed
+
+      //(4) Write a script that prints 'Login successful' only when both username and password are correct.
+
+      // function login(){
+      //   enteredUsername = "ishan123";
+      //   enteredPassword = "ishan@9006";
+      //   correctUsername = "ishan123";
+      //   correctPassword = "ishan@9006"; 
+      //   result = enteredUsername == correctUsername && enteredPassword == correctPassword ? "Login successful" : "Invalid credentials";
+      //   console.log(result);   
+      // }
+      // login();
+      // output: Login successful
+
+      //(5) Predict the result: 
+
+      // let x = 10, y = 5; 
+      // console.log(x>5&&y<10); output: true, because both conditions are true
+      // console.log(x<5 || y<10); output: true, because at least one condition is true
+
+      //Ternary Operator 
+
+      //(6) Write a program to check if a number is even or odd using the ternary operator. 
+
+      // function evenOrOdd(){
+      //   number = 21;
+      //   result = number % 2 == 0 ? "number is even" : "number is odd";
+      //   console.log(result);
+      // }
+      // evenOrOdd();
+      // output: number is odd
+      
+
+      //(7) Use a ternary operator to assign 'Pass' if marks>= 35, otherwise 'Fail'
+
+      // function passOrFail(){
+      //   marks = 21;
+      //   result = marks >= 35 ? "Pass" : "Fail";
+      //   console.log(result);
+      // }
+      // passOrFail();
+      // output: Fail
+      
+
+      //(8) Predict the result: 
+
+      // function adultOrMinor(){
+      //   let age = 18; 
+      //   let result = (age>= 18) ? 'Adult' : 'Minor'; 
+      //   console.log(result);
+      // }
+      // adultOrMinor();
+      // output: Adult, because condition inside the brackets is true
+
+      //(9) Write a program to check if a number is positive, negative, or zero (using nested ternary)
+
+      // function checkNumberType(){
+      //   number = -21;
+      //   result = number > 0 ? "number is positive" : (number < 0 ? "number is negative" : "number is zero");
+      //   console.log(result);
+      // }
+      // checkNumberType();
+      // output: number is negative
+
+
+
+      //(10) Convert this if-else into a ternary statement: 
+
+      // if (score>80) { 
+
+      //   grade = 'A'; 
+
+      // } else { 
+
+      //   grade = 'B'; 
+
+      // } 
+      // score = 67;
+      // grade = null;
+      // result = score > 80 ? grade = 'A' : grade = 'B';
+      // console.log(result);
+      // output: B
+
+      // September 10 Questions Converted into functions
+
+      // Basic Level (if condition)
+
+      // (1) Write a program to check if a number is positive.
+
+      // function checkPositive(){
+      //   number = 21;
+      //   if (number > 0){
+      //     console.log("number is positive");
+      //   }
+      // }
+      // checkPositive();
+      // output: number is positive
+
+      // (2) Check if a number is greater than 100.
+
+      // function greaterThanHundred(){
+      //   number = 169;
+      //   if (number > 100){
+      //     console.log("number is greater than 100");
+      //   }
+      // }
+      // greaterThanHundred();
+      // output: number is greater than 100
+
+      // (3) Take a user’s age and print “Eligible to vote” if age ≥ 18.
+
+      // function canVote(){
+      //   userAge = 19;
+      //   if (userAge >= 18){
+      //     console.log("Eligible to vote");
+      //   }
+      // }
+      // canVote();
+      // output: Eligible to vote
+
+      // (4) Check if a given string is not empty.
+
+      // function isStringEmpty(){
+      //   string = "ishan";
+      //   if(string){
+      //     console.log("string is not empty");
+      //   }
+      // }
+      // isStringEmpty()
+      // output: string is not empty
+
+      // (5) Check if a variable marks is greater than 35, then print “Pass”.
+
+      // function isPass(){
+      //   marks = 67;
+      //   if (marks > 35){
+      //     console.log("Pass");
+      //   }
+      // }
+      // isPass();
+      // output: Pass
+
+      // If-Else Practice Questions
+
+      // (6) Write a program to check if a number is even or odd.
+
+      // function isEvenOrOdd(){
+      //   number = 21;
+      //   if (number % 2 == 0){
+      //     console.log("number is even");
+      //   }
+      //   else{
+      //     console.log("number is odd");
+      //   }
+      // }
+      // isEvenOrOdd();  
+      // output: number is odd
+
+      // (7) Take a temperature value — if it’s above 30 print “Hot”, else print “Cool”.
+
+      // function coolOrHot(){
+      //   temperature = 26;
+      //   if (temperature > 30){
+      //     console.log("Hot");
+      //   }
+      //   else{
+      //     console.log("Cold");
+      //   }
+      // }
+      // coolOrHot();
+      // output: Cold
+
+      // (8) Check if a given number is divisible by 5 — if not, print “Not Divisible”.
+
+      // function divisibleBy5(){
+      //   number = 26;
+      //   if (number % 5 != 0){
+      //     console.log("Not Divisible");
+      //   }
+      // }
+      // divisibleBy5();
+      // output: Not Divisible
+
+      // (9) If a person’s age is ≥ 18 print “Adult”, else “Minor”.
+
+      // function adultOrMinor(){
+      //   age = 16;
+      //   if (age >= 18){
+      //     console.log("Adult");
+      //   }
+      //   else{
+      //     console.log("Minor");
+      //   } 
+      // }
+      // adultOrMinor();
+      // output: Minor
+
+      // (10) If a string is 'JavaScript', print “Correct language!”, else print “Try again!”.
+
+      // function checkLanguage(){
+      //   string = "Python";
+      //   if (string == "Javascript"){
+      //     console.log("Correct language");
+      //   }
+      //   else{
+      //     console.log("Try again!");
+      //   }
+      // }
+      // checkLanguage();
+      //output: Try again!
+
+      // Mini Practice Challenges
+
+      // (11) Write a program to find the largest of two numbers using if-else.
+
+      // function findLargest(){
+      //   number1 = 67;
+      //   number2 = 21;
+      //   if (number1 > number2){
+      //     console.log("the first number is larger than second");
+      //   }
+      //   else{
+      //     console.log("the second number is larger than first");
+      //   }
+      // }
+      // findLargest();
+      // output: first number is larger than second
+
+      // (12) Take a year and check whether it’s a leap year.
+
+      // leap year contain 366 days
+
+      // function isLeapYear(){
+      //   yearDays = 366;
+      //   if(yearDays > 365){
+      //     console.log("it's a leap year")
+      //   }
+      //   else{
+      //     console.log("it's not a leap year")
+      //   }
+      // }
+      // isLeapYear();
+      // output: it's a leap year
+
+      // (13) Check if a number is divisible by both 3 and 5.
+
+      // function isDivisible(){
+      //   number = 30;
+      //   if(number % 3 == 0 && number % 5 == 0){
+      //     console.log("the number is divisible by both 3 and 5");
+      //   }
+      //   else{
+      //     console.log("the number is not divisible by both 3 and 5");
+      //   }
+      // }
+      // isDivisible(); 
+      // output: the number is divisible by both 3 and 5
+
+      // (14) Take user input for username and password and print “Login Successful” if both match.
+
+      // function login(){
+      //   username = "ishan@21";
+      //   password = "ishan@269";
+      //   if(username == "ishan@21" && password == "ishan@269"){
+      //     console.log("Login Successful");
+      //   }
+      //   else{
+      //     console.log("Invalid Credentials");
+      //   }
+      // }
+      // login(); 
+      // output: Login Successful
+    </script>
+  </body>
+</html>
