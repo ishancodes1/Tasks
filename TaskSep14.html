@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//     JavaScript Functions – Assignment
+
+// A. Simple Functions
+
+// 1.	Create a function `greet()` that prints "Hello, Welcome to JavaScript!".
+
+// function greet(){
+//   console.log("Hello, Welcome to Javascript!");
+// }
+// greet();
+// output: Hello, Welcome to Javascript!
+
+
+// 2.	Create a function `welcome()` that prints your name, course, and institute name.
+
+// function welcome(){
+//   name = "Ishan";
+//   course = "MERN Stack";
+//   institute = "Excellence Technology";
+//   console.log(name);
+//   console.log(course);
+//   console.log(institute);
+// }
+// welcome();
+// output:
+// Ishan
+// MERN Stack
+// Excellence Technology
+
+
+// 3.	Create a function `calculate()` that prints the result of 10 + 20.
+
+// function calculate(){
+//   number1 = 10;
+//   number2 = 20;
+//   result = number1 + number2;
+//   console.log(result);
+// }
+// calculate();
+// output: 30
+
+
+// B. Functions with Parameters&Arguments
+
+// 4.	Create a function `greetUser(name)` that accepts a name as a parameter and prints a greeting.
+
+// function greetUser(name){
+//   console.log("Welcome, " + name);
+// }
+// greetUser("Ishan");
+// greetUser("Navjot");
+// output: 
+// Welcome, Ishan
+// Welcome, Navjot
+
+
+// 5.	Create a function `add(a, b)` that accepts two numbers and prints their sum.
+
+// function add(a, b){
+//   sum = a + b;
+//   console.log(sum);
+// }
+// add(67, 21);
+// add(10, 20);
+// output: 
+// 88
+// 30
+
+
+// 6.	Create a function `subtract(a, b)` that accepts two numbers and returns their difference.
+
+// function subtract(a, b){
+//   result = a - b;
+//   console.log(result);
+// }
+// subtract(67, 21);
+// subtract(30, 20);
+// output: 
+// 46
+// 10
+
+
+// 7.	Create a function `multiply(a, b)` that accepts two numbers and prints their multiplication.
+
+// function multiply(a, b){
+//   result = a * b;
+//   console.log(result);
+// }
+// multiply(67, 21);
+// multiply(2, 10);
+// output: 1407
+// output: 20
+
+
+// 8.	Create a function `divide(a, b)` that accepts two numbers and returns their division.
+
+// function divide(a, b){
+//   result = a / b;
+//   console.log(result);
+// }
+// divide(40, 2);
+// divide(10, 2);
+// output: 
+// 20
+// 5
+
+
+// 9.	Create a function `square(num)` that accepts a number and returns its square.
+
+// function square(num){
+//   result = num * num;
+//   console.log(result);
+// }
+// square(8);
+// square(3);
+// output: 64
+// output: 9
+
+
+// 10.	Create a function `checkEvenOdd(num)` that accepts a number and prints whether it is Even or Odd.
+
+// function checkEvenOdd(num){
+//   if(num % 2 == 0){
+//     console.log("It is Even");
+//   }
+//   else{
+//     console.log("It is Odd");
+//   }
+// }
+// checkEvenOdd(6);
+// checkEvenOdd(21);
+// output: 
+// It is Even
+// It is Odd
+
+
+// 11.	Create a function `findLargest(a, b)` that accepts two numbers and prints the larger number.
+
+// function findLargest(a, b){
+//   if(a > b){
+//     console.log("a is larger");
+//   }
+//   else{
+//     console.log("b is larger");
+//   }
+// }
+// findLargest(5, 10);
+// findLargest(10, 20);
+// output:
+// b is larger
+// b is larger
+
+
+// 12.	Create a function `student(name, age, course)` that accepts three arguments and prints the student’s details.
+
+// function student(person){
+//   console.log("Name: " + person.name);
+//   console.log("Age: " + person.age);
+//   console.log("Course: " + person.course);
+// }
+// firstPerson = {
+//   name: "Ishan",
+//   age: 20,
+//   course: "MERN Stack"
+// };
+// secondPerson = {
+//   name: "Siddarth",
+//   age: 21,
+//   course: "B.com"
+// };
+// student(firstPerson);
+// student(secondPerson);
+// output: 
+
+// Name: Ishan
+// Age: 20
+// Course: MERN Stack
+// Name: Siddarth
+// Age: 21
+// Course: B.com
+
+
+// 13.	Create a function `calculateMarks(m1, m2, m3)` that accepts marks of three subjects and returns the total marks.
+
+// function calculateMarks(m1, m2, m3){
+//   total = m1 + m2 + m3;
+//   console.log(total);
+// }
+// calculateMarks(10, 40, 30);
+// calculateMarks(10, 20, 30);
+// output: 
+// 80
+// 60
+
+
+// C. Arrow Functions
+
+// 14.	Create an arrow function `greet` that prints "Hello JavaScript".
+
+// greet = () => {
+//   console.log("Hello Javascript");
+// }
+// greet();
+// output: Hello Javascript
+
+
+// 15.	Create an arrow function `add(a, b)` that returns the sum of two numbers.
+
+// add = (a, b) => {
+//   result = a + b;
+//   console.log(result);
+// }
+// add(20, 40);
+// output: 60
+
+
+// 16.	Create an arrow function `square(num)` that returns the square of a number.
+
+// square = (num)=>{
+//   result = num * num;
+//   console.log(result);
+// }
+// square(4);
+// output: 16
+
+
+// 17.	Create an arrow function `checkAge(age)` that checks whether a person is 18 or older and prints "Eligible" or "Not Eligible".
+
+// checkAge = (age) => {
+//   if(age >= 18){
+//     console.log("Eligible");
+//   }
+//   else{
+//     console.log("Not Eligible")
+//   }
+// }
+// checkAge(17);
+// output: Not Eligible
+
+
+// 18.	Create an arrow function `calculateBill(price, quantity)` that calculates and returns the total bill.
+
+// calculateBill = (price, quantity) => {
+//     totalBill  = (price * quantity);
+//     console.log("Total Bill: " + totalBill);
+// }
+// calculateBill(600, 3);
+// output: Total Bill: 1800
+
+  </script>
+</body>
+</html>
