@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Practice</title>
+  <style>
+    .container{
+      display: flex;    
+      align-items: center;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <h1 id="head">Hello Ishan</h1>
+      <p id="para"></p>
+      <button onclick="changeName()">Change Name</button>
+      <button onclick="showGreeting()">Show Greeting</button>
+  </div>
+  <script>
+    function changeName(){
+      document.getElementById("head").innerHTML = "Hello Jasman";
+    }
+    function showGreeting(){
+      document.getElementById("para").innerHTML = "hi ishan or jasman, how you doing? i hope you are doing fine"
+    }
+  </script>
+</body>
+</html>
