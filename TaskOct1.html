@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October 1 Task</title>
+</head>
+<body>
+ <script>
+// Question 1 — Create an asynchronous function named `welcomeUser()`. 
+// The function should wait for **2 seconds** and then return the following message: ```text Welcome to JavaScript Async/Await! ``` 
+// Call the function and display the returned message in the console.
+
+// Solution:
+  async function welcomeUser(){
+    setTimeout(()=>{
+      return console.log("Welcome to JavaScript Async/Await!")
+    }, 2000)
+  }
+  welcomeUser()
+
+
+// Question 2 — Promise with Async/Await: Create a function named `getMessage()` that returns a Promise. 
+// The Promise should resolve after **2 seconds** with the message: ```text Data received successfully ``` Use `async/await` to receive and
+//  display the message. --- ## 
+
+// Question 3 — Get User Data: Create an asynchronous function named `getUser()`. Use a Promise to return the following user information
+//  after **2 seconds**: ```text Name: Amit Age: 22 City: Chandigarh ``` Use `await` to get the result and display it in the console. --- ## 
+
+// Question 4 — Fetch Data from API: Create an asynchronous function that uses `fetch()` 
+// to get users from: ```text https://jsonplaceholder.typicode.com/users ``` Requirements: - Use `async` - Use `await` - Convert the response
+//  into JSON - Display the user data in the console
+
+// Solution:
+  async function getUsers() {
+    await fetch("https://jsonplaceholder.typicode.com/users")
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+  }
+  getUsers()
+
+// Question 5 — Create an asynchronous function that makes a request to an **invalid API URL**. Use `try...catch` to 
+// handle the error. If the request fails, display: ```text Something went wrong ```
+ </script>
+</body>
+</html>

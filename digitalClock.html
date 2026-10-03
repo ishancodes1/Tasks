@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>October 1 Task</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Isometra&family=Orbitron:wght@400..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+      @font-face {
+        font-family: "DS-DIGIB";
+        src:
+          url("fonts/DS-DIGIB.TTF") format("truetype");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #clock {
+        font-family: "DS-DIGIB";
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+        font-size: 70px;
+        border: 8px solid rgb(47, 255, 85);;
+        width: 90%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 20px;
+      }
+      .clockContainer {
+        border: 10px solid rgb(47, 255, 85);;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 450px;
+        height: 300px;
+        color: rgb(47, 255, 85);
+        background-color: black;
+        font-size: 40px;
+        margin-left: 30px;
+      }
+      .heading {
+        font-family: "Isometra", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(47, 255, 85);;
+        margin-bottom: 50px;
+        margin-left: 40px;
+      }
+      .clockLabel {
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        color: rgb(47, 255, 85);;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="heading">THE DIGITAL CLOCK</h1>
+    <div class="clockContainer">
+      <p id="clock"></p>
+      <p class="clockLabel">Clock</p>
+    </div>
+    <script>
+      setInterval(() => {
+        hours = (new Date().getHours() % 12);
+        minutes = new Date().getMinutes();
+        seconds = new Date().getSeconds();
+        clock = document.getElementById("clock");
+        clock.innerText = hours + " : " + minutes + " : " + seconds;
+      }, 1000);
+    </script>
+  </body>
+</html>
