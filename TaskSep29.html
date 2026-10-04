@@ -13,9 +13,45 @@
         justify-self: center;
         border-radius: 5%;
       }
+      .imagesContainer img{
+        height: 300px;
+        width: 400px;
+      }
+      .imagesContainer{
+        border: 5px solid black;
+        height: 320px;
+        width: 420px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+      }
+      .buttonsContainer{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      #listContainer{
+        border: 5px solid rgb(255, 187, 0);
+        background-color: rgba(255, 0, 0, 0.342);
+        width: 20%;
+        padding: 20px;
+        justify-self: center;
+        border-radius: 5%;
+      }
+      .taskCard{
+        border: 5px solid rgb(255, 187, 0);
+        background-color: rgba(0, 187, 255, 0.342);
+        width: 20%;
+        padding: 20px;
+        justify-self: center;
+        border-radius: 5%;  
+      }
     </style>
   </head>
   <body>
+    <!-- Question 1 Solution -->
+    <h1>Simple Calculator:</h1>
     <div class="container">
       <h1>Simple calculator</h1>
       <label for="num1">Number 1:</label>
@@ -28,6 +64,50 @@
       <button onclick="divide()">Divide</button>
       <p id="result"></p>
     </div>
+
+
+    <!-- Question 3 Solution -->
+     <h1>Registration Form:</h1>
+     <div class="container">
+      <label for="name">Name:</label>
+      <input type="text" id="name"><br><br>
+      <label for="password">Password:</label>
+      <input type="text" id="password"><br><br>
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="text" id="confirmPassword"><br><br>
+      <button onclick="checkPassword()">Submit</button>
+     <p id="passwordResult"></p>
+     </div>
+
+
+     <!-- Question 5 Solution -->
+      <h1>Image Slider:</h1>
+      <div class="imagesContainer">
+        <img src="images/football1.avif" id="slideImage">
+      </div>
+      <div class="buttonsContainer">
+        <button onclick="changeImage(`previous`)">Previous</button>
+        <button onclick="changeImage(`next`)">Next</button>
+      </div>
+
+
+      <!-- Question 7 Solution -->
+       <h1>YouTube Search Interface:</h1>
+       <div class="container">
+        <input type="text" id="searchBar" placeholder="search...">
+        <button onclick="redirectYoutube()">Search</button>
+       </div>
+
+
+       <!-- Question 8 Solution: -->
+        <h1>To Do List Maker:</h1>
+        <div id="listContainer">
+          <h2>To Do List</h2>
+          <input type="text" id="taskWritingInput">
+          <button onclick="addTask()">Add</button>
+        </div>
+
+        
     <script>
       // Qus 1. Create a simple calculator using HTML, CSS, and JavaScript. Add two input fields for taking two numbers as input.
       // Create four buttons — Add, Subtract, Multiply, and Divide. When the user clicks any button, perform the corresponding operation
@@ -62,6 +142,83 @@
 
       // Qus 2. Create an input field where the user can enter any value. When the user clicks a button, check whether the entered 
       // value is a number or a string and display the result on the webpage
+
+
+      // Qus 3.Create a registration form with five input fields: Name, Password, and Confirm Password. Add a Submit button. 
+      // When the user clicks the button, check whether the Password and Confirm Password values are the same or different.
+      // Display an appropriate message such as “Password matched” or “Password does not match” on the webpage.
+
+      function checkPassword(){
+        password = document.getElementById("password").value;
+        confirmPassword = document.getElementById("confirmPassword").value;
+        passwordResult = document.getElementById("passwordResult");
+        if(password == confirmPassword){
+          passwordResult.innerText = "Password matched";
+        }
+        else{
+          passwordResult.innerText = "Password does not match";
+        }
+      }
+
+
+      // Qus 5. Create an image slider using HTML, CSS, and JavaScript. Display one image at a time and 
+      // add two buttons: “Previous” and “Next”. When the user clicks the Next button, show the next image, 
+      // and when the user clicks the Previous button, show the previous image. The slider should be continuous,
+      // meaning after the last image, clicking Next should show the first image again, and clicking Previous on
+      // the first image should show the last image. 
+
+      images = ["images/football1.avif",
+                "images/football2.jpg",
+                "images/basketBall1.jpeg",
+                "images/basketBall2.jpeg",
+                "images/baseball1.jpg",
+                "images/baseball2.jpg"
+      ]
+      currentImage = 0;
+      slideImage = document.getElementById("slideImage");
+      function changeImage(prevOrNext){
+        if(prevOrNext == "previous"){
+          if(currentImage == 0){
+            currentImage = images.length - 1;
+          }
+          else{
+            currentImage--;
+          }
+        }
+        else{
+          if(currentImage == images.length - 1){
+            currentImage = 0;
+          }
+          else{
+            currentImage++;
+          }
+        }
+        slideImage.src = images[currentImage];
+      }
+
+
+      // qus 6. Create a fully functional calculator using HTML, CSS, and JavaScript.
+      
+      
+      // Qus 7. Create a YouTube video search bar using HTML, CSS, and JavaScript. 
+      // The search interface should contain: One input field where the user can enter a keyword. One Search button.
+
+      // solution:
+      function redirectYoutube(){
+        enteredQuery = document.getElementById("searchBar").value;
+        encodedQuery = "https://www.youtube.com/results?search_query="+ encodeURIComponent(enteredQuery);
+        window.location.href = encodedQuery;
+      }
+
+
+      // Qus 8. Create a fully functional To-Do List where users can Add, Edit, and Delete tasks.
+
+      // solution:
+      function addTask(){
+        task = document.getElementById("taskWritingInput").value;
+        listContainer = document.getElementById("listContainer");
+        listContainer.innerHTML += `<p class="taskCard">${task}</p>`;
+      }
     </script>
   </body>
 </html>
